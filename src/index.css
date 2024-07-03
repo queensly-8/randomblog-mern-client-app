@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+/* Navbar */
+*{
+    font-family: Newsreader, sans-serif;
+    animation: transitionIn 0.75s;
+}
+#transparentbg {
+    background-color: transparent !important; /* Make navbar background transparent */
+    position: absolute; /* Position it inside the landing section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+#transparentbg .nav-link {
+    font-size: 30px;
+    font-family: "Newsreader", sans-serif;
+    color: black;
+    margin: 20px;
+}
+#transparentbg .nav-link:hover {
+    color: plum; /* Hover color */
+}
+
+/* Main Content */
+.text {
+    margin-top: 30px; /* Add top margin to compensate for fixed navbar */
+    margin-bottom: 10px;
+    font-size: 100px;
+    color: black;
+}
+
+#landing {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflowing video */
+    background: url("./images/bg.png");
+    font-family: "Newsreader", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cardu{
+    width: 20rem;
+    height: 100vh;
+    margin-top: 20px;
+    padding: 20px;
+    background: url("./images/bg.png");
+}
+
+button.btn{
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    background-color: plum;
+    border-radius: 50px;
+    
+}
+.submit-container button.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+    border-radius: 50px;
+}
+
+button.btn:hover {
+    background-color: violet;
+    color: black;
+}
+
+footer{
+    font-family: 'Newsreader', sans-serif;
+}
+
+
+/* Additional Styles */
+.container1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 110px;
+    width: 600px;
+    background: url("../src/images/bg.png");
+    padding-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.header .text {
+    color: black;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.inputs {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 30px;
+}
+
+.input input {
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit-container {
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.submit {
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: black;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.register {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Tracker */
+.navtracker{
+    font-family: 'Newsreader', sans-serif;
+    color: black;
+    background: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+#top #tracker {
+    position: relative;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflowing video */
+    background: url("../src/images/bg.png");
+    font-family: "Newsreader", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.profile-container {
+    margin-top: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the container */
+    border: 2px solid #fff; /* Optional: Add a white border */
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #fff; /* Change color if needed */
+    font-family: "Newsreader", sans-serif;
+}
+
+/* BLOG DIV */
+.blog-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+.blog-title-container {
+    display: inline-block !important;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+
+/* CARDS */
+.card {
+    border: none !important;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+    font-family: Newsreader ,sans-serif;
+  }
+  .card img {
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #ddd;
+  }
+  .card-content {
+    padding: 20px;
+    border: none;
+  }
+  .card-category {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border: none !important;
+  }
+  .card-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+.card-footer{
+    border: none !important;
+    
+}
+.card-footer a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Image */
+img.img{
+    width: 700px;
+    height: 700px;
+}
+
+
+/* Blogview */
+.site-content{
+    padding-left: 15rem;
+    padding-right: 15rem;
+
+}
+.title{
+    margin: 2rem 2rem 0.5rem 2rem;
+}
+.dets{
+    margin: 2rem 2rem 0.5rem 2rem;
+}
+.comments-link{
+    margin: 0.5rem 2rem 0.5rem 2rem;
+}
+.comment-card{
+    padding: 1rem;
+}
+.comment-card.ctitle{
+    font-size: 50px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #ffe4e1;
+}
+
+
+@keyframes transitionIn{
+    from{
+      opacity: 0;
+      transform: rotateX(-10deg);
+    }
+    to{
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
