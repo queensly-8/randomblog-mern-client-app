@@ -1,6 +1,11 @@
-export default GetBlog()=>{
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Card, Button } from 'react-bootstrap';
+import im from '../../src/images/Random.png' // Adjust the path to your image
 
-const [blog, setBlog] = useState(null);
+const GetBlog = () => {
+  const [blog, setBlog] = useState(null);
+  const { blogId } = useParams(); // Use useParams to get the blogId from the URL
 
   // Fetch blog from API
   const fetchBlog = () => {
@@ -38,36 +43,36 @@ const [blog, setBlog] = useState(null);
   }
 
   return (
-    <div>
-      <div className="site-content">
-        <div className="ast-container">
-          <div className="content-area primary">
-            <main className="site-main">
-              <Card className="mb-4">
-                <Card.Body>
-                  <div className="post-thumb-img-content post-thumb">
-                    <img
-                      src={im}
-                      className="img-fluid"
-                      alt="Blog Thumbnail"
-                    />
-                  </div>
-                  <h1 className="title">{blog.title}</h1>
-                  <div className="d-flex align-items-center mb-3">
-                    <span className="comments-link">
-                      <a href="#">Leave a Comment</a>
-                    </span>
-                    <span className="ml-3">/ By {blog.author[0].name}</span>
-                  </div>
-                  <div className="entry-content">
-                    <p>{blog.content}</p>
-                  </div>
-                </Card.Body>
-              </Card>
-            </main>
+    <div className="site-content">
+      <div className="ast-container">
+        <div className="content-area primary">
+          <main className="site-main">
+            <Card className="mb-4">
+              <Card.Body>
+                <div className="post-thumb-img-content post-thumb">
+                  <img
+                    src={im}
+                    className="img-fluid"
+                    alt="Blog Thumbnail"
+                  />
+                </div>
+                <h1 className="title">{blog.title}</h1>
+                <div className="d-flex align-items-center mb-3">
+                  <span className="comments-link">
+                    <a href="#">Leave a Comment</a>
+                  </span>
+                  <span className="ml-3">/ By {blog.author[0].name}</span>
+                </div>
+                <div className="entry-content">
+                  <p>{blog.content}</p>
+                </div>
+              </Card.Body>
+            </Card>
+          </main>
         </div>
+      </div>
     </div>
-</div>
-</div>
-  )
-}
+  );
+};
+
+export default GetBlog;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import '../index.css'
 import im from '../../src/images/Random.png'
 
-export default function Navbar(){
+export default function Navbars(){
     return (
         <Navbar className="navbar" id="transparentbg">
         <Container >
